@@ -1,4 +1,4 @@
-=== Fancier Author Box ===
+=== Fancier Author Box by ThematoSoup ===
 Contributors: slobodanmanic, nikolicdragan
 Tags: author, author description, author box, author bio, fancier author box, thematosoup author box, author profile, author bio box, multi author
 Requires at least: 3.1
@@ -11,7 +11,7 @@ Give identity to your single or multi-author WordPress website with Fancier Auth
 
 == Description ==
 
-If you're looking for a way to make your every page a landing page for new contacts and leads , then you will find Fancier Author Box by ThematoSoup invaluable.
+If you're looking for a way to make your every page a landing page for new contacts and leads, then you will find Fancier Author Box by ThematoSoup invaluable.
 
 Make your every post stand out and attract your readers' eyes. Connect with your audience on all levels and make sure people always read your author's bio and engage you on social networks.
 
@@ -67,9 +67,9 @@ No, this is not possible in the free version.
 
 == Screenshots ==
 
-1. Fancier Author Box Wordpress plugin underneath your posts
-2. Global options page for Fancier Author Box
-3. User settings page after installing Fancier Author Box
+1. Fancier Author Box underneath your posts
+2. Global options page (display & color settings)
+3. User settings page
 
 == Changelog ==
 
