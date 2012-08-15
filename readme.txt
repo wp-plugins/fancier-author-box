@@ -19,7 +19,7 @@ Make your every post stand out and attract your readers' eyes. Connect with your
 
 1. Download the plugin from this page and extract it
 2. Copy the fancier-author-box folder to the "/wp-content/plugins/" directory 
-3. Activate the plugin through the "Plugins" menu in WordPress dashobard
+3. Activate the plugin through the "Plugins" menu in WordPress dashboard
 
 == Features ==
 
