@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fanciest Author Box\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-06-25 11:05+0100\n"
-"PO-Revision-Date: 2012-06-25 11:05+0100\n"
+"POT-Creation-Date: 2012-09-29 08:11+0100\n"
+"PO-Revision-Date: 2012-09-29 08:11+0100\n"
 "Last-Translator: Slobodan Manic <slobodan.manic@gmail.com>\n"
 "Language-Team: ThematoSoup\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,18 @@ msgstr ""
 
 #: ts-fab.php:53
 msgid "Settings"
+msgstr ""
+
+#: includes/ts-fab-construct-tabs.php:25
+msgid "My Twitter profile"
+msgstr ""
+
+#: includes/ts-fab-construct-tabs.php:27
+msgid "My Facebook profile"
+msgstr ""
+
+#: includes/ts-fab-construct-tabs.php:29
+msgid "My Google+ profile"
 msgstr ""
 
 #: includes/ts-fab-construct-tabs.php:48
@@ -115,7 +127,7 @@ msgid "Tab content colors"
 msgstr ""
 
 #: includes/ts-fab-settings.php:211
-msgid "Select where and how Fanciest Author Box appears in your posts, pages and custom posts."
+msgid "Select where and how Fancier Author Box appears in your posts, pages and custom posts."
 msgstr ""
 
 #: includes/ts-fab-settings.php:240
@@ -143,7 +155,7 @@ msgid "No"
 msgstr ""
 
 #: includes/ts-fab-settings.php:354
-msgid "The only author box plugin you'll ever need. Unless you need something fancier. Like <a href=\"http://codecanyon.net/item/fanciest-author-box/2504522?ref=ThematoSoup\">Fanciest Author Box</a>."
+msgid "The only author box plugin you'll ever need. Unless you need something fancier, like <a href=\"http://codecanyon.net/item/fanciest-author-box/2504522?ref=ThematoSoup\">Fanciest Author Box</a>."
 msgstr ""
 
 #: includes/ts-fab-settings.php:366

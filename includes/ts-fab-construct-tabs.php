@@ -22,11 +22,11 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 			$ts_fab_bio .= '<div class="ts-fab-social-links">';
 			
 				if( get_user_meta( $author->ID, 'ts_fab_twitter', true) )
-					$ts_fab_bio .= '<a href="http://twitter.com/' . get_user_meta( $author->ID, 'ts_fab_twitter', true ) . '" title="Twitter"><img src="' . plugins_url( 'images/twitter.png', dirname(__FILE__) ) . '" width="18" height="18" /></a>';
+					$ts_fab_bio .= '<a href="http://twitter.com/' . get_user_meta( $author->ID, 'ts_fab_twitter', true ) . '" title="Twitter"><img src="' . plugins_url( 'images/twitter.png', dirname(__FILE__) ) . '" width="18" height="18" alt="' . __( 'My Twitter profile', 'ts-fab' ) . '" /></a>';
 				if( get_user_meta( $author->ID, 'ts_fab_facebook', true) )
-					$ts_fab_bio .= '<a href="http://facebook.com/' . get_user_meta( $author->ID, 'ts_fab_facebook', true ) . '" title="Facebook"><img src="' . plugins_url( 'images/facebook.png', dirname(__FILE__) ) . '" width="18" height="18" /></a>';
+					$ts_fab_bio .= '<a href="http://facebook.com/' . get_user_meta( $author->ID, 'ts_fab_facebook', true ) . '" title="Facebook"><img src="' . plugins_url( 'images/facebook.png', dirname(__FILE__) ) . '" width="18" height="18" alt="' . __( 'My Facebook profile', 'ts-fab' ) . '" /></a>';
 				if( get_user_meta( $author->ID, 'ts_fab_googleplus', true) )
-					$ts_fab_bio .= '<a href="http://plus.google.com/' . get_user_meta( $author->ID, 'ts_fab_googleplus', true ) . '" title="Google+"><img src="' . plugins_url( 'images/gplus2.png', dirname(__FILE__) ) . '" width="18" height="18" /></a>';
+					$ts_fab_bio .= '<a href="http://plus.google.com/' . get_user_meta( $author->ID, 'ts_fab_googleplus', true ) . '?rel=author" title="Google+"><img src="' . plugins_url( 'images/gplus2.png', dirname(__FILE__) ) . '" width="18" height="18" alt="' . __( 'My Google+ profile', 'ts-fab' ) . '" /></a>';
 			
 			$ts_fab_bio .= '</div>
 		</div>
