@@ -3,7 +3,7 @@ Contributors: slobodanmanic, nikolicdragan
 Tags: author, author description, author box, author bio, fancier author box, thematosoup author box, author profile, author bio box, multi author
 Requires at least: 3.1
 Tested up to: 3.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -72,6 +72,10 @@ No, this is not possible in the free version.
 3. User settings page
 
 == Changelog ==
+
+= 1.0.2 =
+
+* Added French translation (credits: Jeanne Corvellec)
 
 = 1.0.1 =
 
