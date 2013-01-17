@@ -15,6 +15,36 @@ If you're looking for a way to make your every page a landing page for new conta
 
 Make your every post stand out and attract your readers' eyes. Connect with your audience on all levels and make sure people always read your author's bio and engage you on social networks.
 
+= Social Networks =
+* Twitter
+* Facebook
+* Google+ & automatic Google Authorship verification (rel=author)
+* Job title (position)
+* Company
+* Company URL
+
+
+= Display Settings =
+Allow you to choose where Fancier Author Box appears on your website.
+
+* Show in posts (above, below, both, none)
+* Show in pages (above, below, both, none)
+* Bio - This is a standard author bio description. It uses your Gravatar image and alows you to put social profile icons
+* Latest Posts - Shows number of latest posts you specify and dates
+
+= Color Settings =
+Allow you to change colors of just about any author box element. These elements include:
+
+* Inactive Tab
+* Inactive Tab Border
+* Inactive Tab Background
+* Active Tab
+* Active Tab Border
+* Active Tab Background
+* Tab Content
+* Tab Content Border
+* Tab Content Background
+
 == Installation ==
 
 1. Download the plugin from this page and extract it
@@ -30,7 +60,6 @@ Allow you to choose where Fancier Author Box appears on your website.
 
 * Show in posts (above, below, both, none)
 * Show in pages (above, below, both, none)
-* Show in custom post types (above, bellow, both, none)
 * Bio - This is a standard author bio description. It uses your Gravatar image and alows you to put social profile icons
 * Latest Posts - Shows number of latest posts you specify and dates
  
