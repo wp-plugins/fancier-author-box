@@ -29,6 +29,7 @@ Allow you to choose where Fancier Author Box appears on your website.
 
 * Show in posts (above, below, both, none)
 * Show in pages (above, below, both, none)
+* Show in custom post types (above, bellow, both, none)
 * Bio - This is a standard author bio description. It uses your Gravatar image and alows you to put social profile icons
 * Latest Posts - Shows number of latest posts you specify and dates
 
@@ -60,6 +61,7 @@ Allow you to choose where Fancier Author Box appears on your website.
 
 * Show in posts (above, below, both, none)
 * Show in pages (above, below, both, none)
+* Show in custom post types (above, bellow, both, none)
 * Bio - This is a standard author bio description. It uses your Gravatar image and alows you to put social profile icons
 * Latest Posts - Shows number of latest posts you specify and dates
  
