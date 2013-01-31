@@ -104,6 +104,10 @@ No, this is not possible in the free version.
 
 == Changelog ==
 
+= 1.0.4 =
+
+Fixed a bug that added author box to sidebar widget from Category Posts Widget plugin
+
 = 1.0.3 =
 
 * Added Dutch translation (credits: Winy Schalke - http://www.alva-design.com/)
