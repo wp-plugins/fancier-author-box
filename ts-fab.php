@@ -202,6 +202,9 @@ function ts_fab_add_author_box( $content ) {
 		}
 	}	
 
+	// Remove filter after it has been used once, so it's not showing again in additional queries in sidebar or footer
+	remove_filter( 'the_content', 'ts_fab_add_author_box' );
+  
 	return $content;
 
 }
