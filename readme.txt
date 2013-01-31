@@ -2,8 +2,8 @@
 Contributors: slobodanmanic, nikolicdragan
 Tags: author, author description, author box, author bio, fancier author box, thematosoup author box, author profile, author bio box, multi author
 Requires at least: 3.1
-Tested up to: 3.4
-Stable tag: 1.1
+Tested up to: 3.5.1
+Stable tag: 1.0.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -104,9 +104,13 @@ No, this is not possible in the free version.
 
 == Changelog ==
 
+= 1.0.4.1 =
+
+* Had to revert the fix from 1.0.4 as it caused other issues, sorry everyone
+
 = 1.0.4 =
 
-Fixed a bug that added author box to sidebar widget from Category Posts Widget plugin
+* Fixed a bug that added author box to sidebar widget from Category Posts Widget plugin
 
 = 1.0.3 =
 
