@@ -18,7 +18,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 	$ts_fab_bio = '
 	<div class="ts-fab-tab" id="ts-fab-bio-' . $context . '">
 		<div class="ts-fab-avatar">';
-			$ts_fab_bio .= get_avatar( $author->ID, 64 );
+			$ts_fab_bio .= get_avatar( $author->ID, 80 );
 			$ts_fab_bio .= '<div class="ts-fab-social-links">';
 			
 				if( get_user_meta( $author->ID, 'ts_fab_twitter', true) )
@@ -26,7 +26,9 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 				if( get_user_meta( $author->ID, 'ts_fab_facebook', true) )
 					$ts_fab_bio .= '<a href="http://facebook.com/' . get_user_meta( $author->ID, 'ts_fab_facebook', true ) . '" title="Facebook"><img src="' . plugins_url( 'images/facebook.png', dirname(__FILE__) ) . '" width="18" height="18" alt="' . __( 'My Facebook profile', 'ts-fab' ) . '" /></a>';
 				if( get_user_meta( $author->ID, 'ts_fab_googleplus', true) )
-					$ts_fab_bio .= '<a href="http://plus.google.com/' . get_user_meta( $author->ID, 'ts_fab_googleplus', true ) . '?rel=author" title="Google+"><img src="' . plugins_url( 'images/gplus2.png', dirname(__FILE__) ) . '" width="18" height="18" alt="' . __( 'My Google+ profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_bio .= '<a href="http://plus.google.com/' . get_user_meta( $author->ID, 'ts_fab_googleplus', true ) . '?rel=author" title="Google+"><img src="' . plugins_url( 'images/googleplus.png', dirname(__FILE__) ) . '" width="18" height="18" alt="' . __( 'My Google+ profile', 'ts-fab' ) . '" /></a>';
+				if( get_user_meta( $author->ID, 'ts_fab_linkedin', true) )
+					$ts_fab_bio .= '<a href="http://www.linkedin.com/in/' . get_user_meta( $author->ID, 'ts_fab_linkedin', true ) . '" title="LinkedIn"><img src="' . plugins_url( 'images/linkedin.png', dirname(__FILE__) ) . '" width="18" height="18" alt="' . __( 'My LinkedIn profile', 'ts-fab' ) . '" /></a>';
 			
 			$ts_fab_bio .= '</div>
 		</div>
@@ -93,7 +95,7 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 	$ts_fab_latest = '
 	<div class="ts-fab-tab" id="ts-fab-latest-posts-' . $context . '">
 		<div class="ts-fab-avatar">';
-			$ts_fab_latest .= get_avatar( $author->ID, 64 );
+			$ts_fab_latest .= get_avatar( $author->ID, 80 );
 			$ts_fab_latest .= '<div class="ts-fab-social-links">';
 			
 				if( get_user_meta( $author->ID, 'ts_fab_twitter', true) )
@@ -101,7 +103,9 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 				if( get_user_meta( $author->ID, 'ts_fab_facebook', true) )
 					$ts_fab_latest .= '<a href="http://facebook.com/' . get_user_meta( $author->ID, 'ts_fab_facebook', true ) . '" title="Facebook"><img src="' . plugins_url( 'images/facebook.png', dirname(__FILE__) ) . '" width="18" height="18" /></a>';
 				if( get_user_meta( $author->ID, 'ts_fab_googleplus', true) )
-					$ts_fab_latest .= '<a href="http://plus.google.com/' . get_user_meta( $author->ID, 'ts_fab_googleplus', true ) . '" title="Google+"><img src="' . plugins_url( 'images/gplus2.png', dirname(__FILE__) ) . '" width="18" height="18" /></a>';
+					$ts_fab_latest .= '<a href="http://plus.google.com/' . get_user_meta( $author->ID, 'ts_fab_googleplus', true ) . '" title="Google+"><img src="' . plugins_url( 'images/googleplus.png', dirname(__FILE__) ) . '" width="18" height="18" /></a>';
+				if( get_user_meta( $author->ID, 'ts_fab_linkedin', true) )
+					$ts_fab_latest .= '<a href="http://www.linkedin.com/in/' . get_user_meta( $author->ID, 'ts_fab_linkedin', true ) . '" title="LinkedIn"><img src="' . plugins_url( 'images/linkedin.png', dirname(__FILE__) ) . '" width="18" height="18" alt="' . __( 'My LinkedIn profile', 'ts-fab' ) . '" /></a>';
 			
 			$ts_fab_latest .= '</div>
 		</div>
@@ -177,5 +181,3 @@ function ts_fab_construct_fab(
 	return $ts_fab;
 
 }
-
-?>

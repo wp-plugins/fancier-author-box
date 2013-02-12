@@ -371,5 +371,3 @@ function ts_fab_show_settings_page() { ?>
 	</form>
 
 <?php }
-
-?>

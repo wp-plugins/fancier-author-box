@@ -51,6 +51,14 @@ function ts_fab_extra_user_details( $user ) { ?>
 				<span class="description"><?php _e( 'Your Google+ ID.', 'ts-fab' ); ?></span>
 			</td>
 		</tr>
+		<tr>
+			<th><label for="ts_fab_googleplus">LinkedIn</label></th>
+
+			<td>
+				<input type="text" name="ts_fab_linkedin" id="ts_fab_linkedin" value="<?php echo esc_attr( get_the_author_meta( 'ts_fab_linkedin', $user->ID ) ); ?>" class="regular-text" /><br />
+				<span class="description"><?php _e( 'Your LinkedIn username', 'ts-fab' ); ?></span>
+			</td>
+		</tr>
 
 		<tr>
 			<th><label for="ts_fab_position"><?php _e( 'Position', 'ts-fab' ); ?></label></th>
@@ -106,10 +114,9 @@ function ts_fab_save_extra_profile_fields( $user_id ) {
 	update_user_meta( $user_id, 'ts_fab_twitter', strip_tags( $_POST['ts_fab_twitter'] ) );
 	update_user_meta( $user_id, 'ts_fab_facebook', strip_tags( $_POST['ts_fab_facebook'] ) );
 	update_user_meta( $user_id, 'ts_fab_googleplus', strip_tags( $_POST['ts_fab_googleplus'] ) );
+	update_user_meta( $user_id, 'ts_fab_linkedin', strip_tags( $_POST['ts_fab_linkedin'] ) );
 	update_user_meta( $user_id, 'ts_fab_position', strip_tags( $_POST['ts_fab_position'] ) );
 	update_user_meta( $user_id, 'ts_fab_company', strip_tags( $_POST['ts_fab_company'] ) );
 	update_user_meta( $user_id, 'ts_fab_company_url', esc_url_raw( $_POST['ts_fab_company_url'] ) );
 	
 }
-
-?>
