@@ -19,7 +19,7 @@ Make your every post stand out and attract your readers' eyes. Connect with your
 * Twitter
 * Facebook
 * Google+ & automatic Google Authorship verification (rel=author)
-* Facebook
+* LinkedIn
 * Job title (position)
 * Company
 * Company URL
@@ -85,6 +85,7 @@ These are settings specific to users. Users have the option to show or hide thei
 * Twitter profile name
 * Facebook username or id
 * Google+ id
+* LinkedIn id
 * Job title (position)
 * Company
 * Company URL
