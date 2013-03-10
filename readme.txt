@@ -106,6 +106,10 @@ No, this is not possible in the free version.
 
 == Changelog ==
 
+= 1.0.6 =
+
+* Added option to disable Fancier Author Box in individual posts/pages by using 'ts_fab_hide' custom field (with any value)
+
 = 1.0.5 =
 
 * Added LinkedIn to social profiles
