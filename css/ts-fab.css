@@ -30,6 +30,9 @@
 	list-style: none !important;
 	margin: 0 5px 0 0 !important;
 }
+.ts-fab-list li:before {
+	display: none !important;
+}
 .ts-fab-list li a {
 	display: block;
 	line-height: 16px;
@@ -46,6 +49,9 @@
 	border-radius: 5px 5px 0 0;
 	-webkit-border-radius: 5px 5px 0 0;
 	-moz-border-radius: 5px 5px 0 0;
+	
+	box-sizing: content-box;
+	-moz-box-sizing: content-box;
 }
 .ts-fab-list li a:hover {
 	color: #333;
