@@ -109,8 +109,8 @@ No, this is not possible in the free version.
 = 1.0.6.2 =
 
 * CSS fixes
-* Added Portuguese translation (credits: http://www.traducteurs.com/)
-* Added Spanish translation (credits: http://www.ip-traduccion.coms/)
+* Added Portuguese translation, credits: http://www.traducteurs.com/
+* Added Spanish translation, credits: http://www.ip-traduccion.coms/
 
 = 1.0.6 =
 
