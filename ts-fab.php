@@ -4,7 +4,7 @@
 Plugin Name: Fancier Author Box
 Plugin URI: http://wordpress.org/extend/plugins/fancier-author-box/
 Description: Adds feature rich author box to your posts, pages and custom post types. If you decide to switch to <a href="http://fanciestauthorbox.com">Fanciest Author Box</a>, please deactivate Fancier Author Box first.
-Version: 1.0.6.4
+Version: 1.0.6.5
 Author: ThematoSoup
 Author URI: http://thematosoup.com
 License: GPL2
@@ -140,7 +140,7 @@ function ts_fab_get_display_settings() {
  *
  * @since 1.0
  */
-add_filter( 'the_content', 'ts_fab_add_author_box' );
+add_filter( 'the_content', 'ts_fab_add_author_box', 15 );
 function ts_fab_add_author_box( $content ) {
 
 	global $authordata;
