@@ -233,6 +233,7 @@
 	list-style: none !important;
 	line-height: 1.2;
 	margin: 0 0 0.6em;
+	clear: none !important;
 }
 .ts-fab-latest li span,
 .ts-fab-twitter-time {

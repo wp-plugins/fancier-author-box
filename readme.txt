@@ -107,6 +107,10 @@ No, this is not possible in the free version.
 == Changelog ==
 
 
+= 1.0.6.7 =
+
+* CSS fixes
+
 = 1.0.6.6 =
 
 * CSS fixes
