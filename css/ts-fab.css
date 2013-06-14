@@ -27,6 +27,7 @@
 .ts-fab-list li {
 	display: block;
 	float: left;
+	clear: none;
 	list-style: none !important;
 	margin: 0 5px 0 0 !important;
 }
@@ -188,7 +189,7 @@
 	margin-bottom: 10px;
 }
 .ts-fab-text h4 {
-	clear: none;
+	clear: none !important;
 	font-size: 18px;
 	line-height: 1 !important;
 	font-weight: bold;
