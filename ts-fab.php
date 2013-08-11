@@ -4,7 +4,7 @@
 Plugin Name: Fancier Author Box
 Plugin URI: http://wordpress.org/extend/plugins/fancier-author-box/
 Description: Adds feature rich author box to your posts, pages and custom post types. If you decide to switch to <a href="http://fanciestauthorbox.com">Fanciest Author Box</a>, please deactivate Fancier Author Box first.
-Version: 1.0.6.8
+Version: 1.1
 Author: ThematoSoup
 Author URI: http://thematosoup.com
 License: GPL2
@@ -149,59 +149,61 @@ function ts_fab_add_author_box( $content ) {
 	// Use helper functions to get plugin settings
 	$ts_fab_display_settings = ts_fab_get_display_settings();
 
-	if( !get_user_meta( $authordata->ID, 'ts_fab_user_hide', false ) && !get_post_meta( $post->ID, 'ts_fab_hide', false ) ) {
-
-		// Show Fancier Author Box in posts
-		if( is_singular( 'post' ) ) {
-
-			$show_in_posts = $ts_fab_display_settings['show_in_posts'];
-			if( $show_in_posts == 'above' ) {
-				$content = ts_fab_construct_fab( 'above', $authordata->ID ) . $content;
-			} elseif( $show_in_posts == 'below' ) {
-				$content .= ts_fab_construct_fab( 'below', $authordata->ID );
-			} elseif( $show_in_posts == 'both' ) {
-				$content = ts_fab_construct_fab( 'above', $authordata->ID ) . $content . ts_fab_construct_fab( 'below', $authordata->ID );
-			}
-
-		}
-
-		// Show Fancier Author Box in pages
-		if( is_singular( 'page' ) ) {
-
-			$show_in_pages = $ts_fab_display_settings['show_in_pages'];
-			if( $show_in_pages == 'above' ) {
-				$content = ts_fab_construct_fab( 'above', $authordata->ID ) . $content;
-			} elseif( $show_in_pages == 'below' ) {
-				$content .= ts_fab_construct_fab( 'below', $authordata->ID );
-			} elseif( $show_in_pages == 'both' ) {
-				$content = ts_fab_construct_fab( 'above', $authordata->ID ) . $content . ts_fab_construct_fab( 'below', $authordata->ID );
-			}
-
-		}
-
-		// Show Fancier Author Box in custom post types
-		$args = array(
-			'public'   => true,
-			'_builtin' => false
-		); 
-		$output = 'names';
-		$operator = 'and';
-		$custom_post_types = get_post_types( $args, $output, $operator ); 
-		foreach ( $custom_post_types  as $custom_post_type ) {
-			if( is_singular( $custom_post_type ) ) {
-		
-				$show_in_custom = $ts_fab_display_settings['show_in_' . $custom_post_type];
-				if( $show_in_custom == 'above' ) {
+	if ( is_singular() ) {
+		if ( !get_user_meta( $authordata->ID, 'ts_fab_user_hide', false ) && !get_post_meta( $post->ID, 'ts_fab_hide', false ) ) {
+	
+			// Show Fancier Author Box in posts
+			if ( is_singular( 'post' ) ) {
+	
+				$show_in_posts = $ts_fab_display_settings['show_in_posts'];
+				if ( $show_in_posts == 'above' ) {
 					$content = ts_fab_construct_fab( 'above', $authordata->ID ) . $content;
-				} elseif( $show_in_custom == 'below' ) {
+				} elseif ( $show_in_posts == 'below' ) {
 					$content .= ts_fab_construct_fab( 'below', $authordata->ID );
-				} elseif( $show_in_custom == 'both' ) {
+				} elseif ( $show_in_posts == 'both' ) {
 					$content = ts_fab_construct_fab( 'above', $authordata->ID ) . $content . ts_fab_construct_fab( 'below', $authordata->ID );
-				}	
+				}
+	
+			}
+	
+			// Show Fancier Author Box in pages
+			if ( is_singular( 'page' ) ) {
+	
+				$show_in_pages = $ts_fab_display_settings['show_in_pages'];
+				if ( $show_in_pages == 'above' ) {
+					$content = ts_fab_construct_fab( 'above', $authordata->ID ) . $content;
+				} elseif ( $show_in_pages == 'below' ) {
+					$content .= ts_fab_construct_fab( 'below', $authordata->ID );
+				} elseif ( $show_in_pages == 'both' ) {
+					$content = ts_fab_construct_fab( 'above', $authordata->ID ) . $content . ts_fab_construct_fab( 'below', $authordata->ID );
+				}
+	
+			}
+	
+			// Show Fancier Author Box in custom post types
+			$args = array(
+				'public'   => true,
+				'_builtin' => false
+			); 
+			$output = 'names';
+			$operator = 'and';
+			$custom_post_types = get_post_types( $args, $output, $operator ); 
+			foreach ( $custom_post_types  as $custom_post_type ) {
+				if( is_singular( $custom_post_type ) ) {
 			
-			}	
-		}
-	}	
+					$show_in_custom = $ts_fab_display_settings['show_in_' . $custom_post_type];
+					if( $show_in_custom == 'above' ) {
+						$content = ts_fab_construct_fab( 'above', $authordata->ID ) . $content;
+					} elseif( $show_in_custom == 'below' ) {
+						$content .= ts_fab_construct_fab( 'below', $authordata->ID );
+					} elseif( $show_in_custom == 'both' ) {
+						$content = ts_fab_construct_fab( 'above', $authordata->ID ) . $content . ts_fab_construct_fab( 'below', $authordata->ID );
+					}	
+				
+				}	
+			}
+		}	
+	}
   
 	return $content;
 

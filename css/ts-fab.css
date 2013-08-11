@@ -166,6 +166,7 @@
 .ts-fab-avatar {
 	display: block;
 	float: left;
+	width: 80px;
 }
 	.ts-fab-no-float .ts-fab-avatar {
 		float: none;
