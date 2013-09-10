@@ -11,6 +11,8 @@ Give identity to your single or multi-author WordPress website with Fancier Auth
 
 == Description ==
 
+For support requests please use our dedicated support forums at - http://support.thematosoup.com/forum/fancier-author-box/
+
 If you're looking for a way to make your every page a landing page for new contacts and leads, then you will find Fancier Author Box by ThematoSoup invaluable.
 
 Make your every post stand out and attract your readers' eyes. Connect with your audience on all levels and make sure people always read your author's bio and engage you on social networks.
