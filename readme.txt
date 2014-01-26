@@ -22,6 +22,12 @@ Make your every post stand out and attract your readers' eyes. Connect with your
 * Facebook
 * Google+ & automatic Google Authorship verification (rel=author)
 * LinkedIn
+* Instagram
+* Flickr
+* Pinterest
+* Tumblr
+* YouTube
+* Vimeo
 * Job title (position)
 * Company
 * Company URL
@@ -84,10 +90,16 @@ Allow you to change colors of just about any author box element. These elements 
 = User Settings =
 These are settings specific to users. Users have the option to show or hide their author box and enter additional information, such as:
 
-* Twitter profile name
-* Facebook username or id
-* Google+ id
-* LinkedIn id
+* Twitter username or profile URL
+* Facebook username, id or profile URL
+* Google+ id or profile URL
+* LinkedIn id or profile URL
+* Instagram username or profile URL
+* Flickr username or profile URL
+* Pinterest username or profile URL
+* Tumblr username or profile URL
+* YouTube username or profile URL
+* Vimeo username or profile URL
 * Job title (position)
 * Company
 * Company URL
@@ -108,6 +120,10 @@ No, this is not possible in the free version.
 
 == Changelog ==
 
+
+= 1.2 =
+
+* Changed user options so either username or full URL can be used for social profiles. For example, in Facebook field in Fancier Author Box User Details section you can use ‘http://facebook.com/username’ or just ‘username’. If full URL is used it must start with ‘http’.
 
 = 1.1.1 =
 

@@ -358,16 +358,65 @@ function ts_fab_show_settings_page() { ?>
 
 	<?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'display_settings'; ?>
 
-	<form method="post" action="options.php">
-		<?php
+	<div id="poststuff">
+		<div id="post-body" class="columns-2">
+			<div id="post-body-content">
+				<form method="post" action="options.php">
+					<?php
+						settings_fields( 'ts_fab_display_settings' );
+						do_settings_sections( 'ts_fab_display_settings' );
+						echo '<a id="ts-fab-reset-colors" href="#" style="margin:15px 0 0 230px;display:inline-block">' . __( 'Reset all color settings', 'ts-fab' ) . '</a>';
 
-			settings_fields( 'ts_fab_display_settings' );
-			do_settings_sections( 'ts_fab_display_settings' );
-			echo '<a id="ts-fab-reset-colors" href="#" style="margin:15px 0 0 230px;display:inline-block">' . __( 'Reset all color settings', 'ts-fab' ) . '</a>';
+						submit_button();
+					?>
+				</form>
+			</div>
 
-			submit_button();
+			<div id="postbox-container-1" class="postbox-container">
+				<div class="metabox-holder">	
+					<div class="meta-box">
+						<div id="fab-promo" class="postbox">
+							<h3>ThematoSoup</h3>
+							<div class="inside">
+								<div>
+									<div style="margin-bottom:10px;">
+									<a href="https://twitter.com/ThematoSoup" class="twitter-follow-button" data-show-count="false">Follow @ThematoSoup</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+									</div>
+									
+									<div style="margin-bottom:10px;">
+									<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FThematoSoup&amp;width=256&amp;height=35&amp;colorscheme=light&amp;layout=standard&amp;action=like&amp;show_faces=false&amp;send=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:256px; height:35px;" allowTransparency="true"></iframe>
+									</div>
+									
+									<div style="margin-bottom:10px;">
+									<!-- Place this tag where you want the widget to render. -->
+									<div class="g-follow" data-annotation="none" data-height="20" data-href="//plus.google.com/104360438826479763912" data-rel="publisher"></div>
+									
+									<!-- Place this tag after the last widget tag. -->
+									<script type="text/javascript">
+									  (function() {
+									    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+									    po.src = 'https://apis.google.com/js/plusone.js';
+									    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+									  })();
+									</script>
+									</div>
 
-		?>
-	</form>
+									<!-- Begin MailChimp Signup Form -->
+									<div id="mc_embed_signup">
+									<form style="margin-top:10px;padding-top:10px;border-top:1px solid #ccc;" action="http://thematosoup.us2.list-manage.com/subscribe/post?u=07d28c9976ef3fcdb23b1ed11&amp;id=5a17a1e006" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+										<div style="margin-bottom:5px;"><label for="mce-EMAIL">Subscribe to our mailing list</label></div>
+										<div style="margin-bottom:5px;"><input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required></div>
+										<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button button-primary"></div>
+									</form>
+									</div>
+									<!--End mc_embed_signup-->
+								</div>
+							</div>
+						</div>
+					</div><!-- .metabox-sortables -->
+				</div><!-- .metabox-holder -->
+			</div><!-- #postbox-container-1 -->
+		</div>
+	</div>
 
 <?php }

@@ -4,7 +4,7 @@
 Plugin Name: Fancier Author Box
 Plugin URI: http://wordpress.org/extend/plugins/fancier-author-box/
 Description: Adds feature rich author box to your posts, pages and custom post types. If you decide to switch to <a href="http://fanciestauthorbox.com">Fanciest Author Box</a>, please deactivate Fancier Author Box first.
-Version: 1.1.2
+Version: 1.2
 Author: ThematoSoup
 Author URI: http://thematosoup.com
 License: GPL2
@@ -219,11 +219,11 @@ function ts_fab_add_author_box( $content ) {
 add_action( 'wp_enqueue_scripts', 'ts_fab_add_scripts_styles' );
 function ts_fab_add_scripts_styles() {
 
-	$css_url = plugins_url( 'css/ts-fab.min.css', __FILE__ );
+	$css_url = plugins_url( 'css/ts-fab.css', __FILE__ );
 	wp_register_style( 'ts_fab_css', $css_url, '', '1.0' );
 	wp_enqueue_style( 'ts_fab_css' );
 
-	$js_url = plugins_url( 'js/ts-fab.min.js', __FILE__ );
+	$js_url = plugins_url( 'js/ts-fab.js', __FILE__ );
 	wp_register_script( 'ts_fab_js', $js_url, array( 'jquery' ), '1.0' );
 	wp_enqueue_script( 'ts_fab_js' );
 	
@@ -279,4 +279,18 @@ function ts_fab_print_color_settings() {
 	</style>
 	<?php
 	}
+}
+
+
+/**
+ * Checks if a string is a URL
+ *
+ * @since 1.2
+ */
+function ts_fab_is_url( $string ) {
+	if ( substr( $string, 0, 4 ) === 'http' ) {
+		return true;
+	}
+
+	return false;
 }
