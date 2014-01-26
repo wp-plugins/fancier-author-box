@@ -1,6 +1,6 @@
 === Fancier Author Box by ThematoSoup ===
 Contributors: slobodanmanic, nikolicdragan
-Tags: author, author description, author box, author bio, fancier author box, thematosoup author box, author profile, author bio box, multi author
+Tags: author, author description, author box, author bio, fancier author box, thematosoup author box, author profile, author bio box, multi author, facebook, twitter, google plus, linkedin, vimeo, youtube, instagram, pinterest, tumblr
 Requires at least: 3.1
 Tested up to: 3.7.1
 Stable tag: 1.1.2
