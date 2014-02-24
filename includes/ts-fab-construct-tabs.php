@@ -28,7 +28,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_twitter_url = 'http://twitter.com/' . get_user_meta( $author->ID, 'ts_fab_twitter', true );
 					}
-					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_twitter_url ) . '" title="Twitter"><img src="' . plugins_url( 'images/twitter.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Twitter profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_twitter_url ) . '" title="Twitter" rel="nofollow"><img src="' . plugins_url( 'images/twitter.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Twitter profile', 'ts-fab' ) . '" /></a>';
 				}
 				
 				// Facebook
@@ -38,7 +38,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_facebook_url = 'http://facebook.com/' . get_user_meta( $author->ID, 'ts_fab_facebook', true );
 					}
-					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_facebook_url ) . '" title="Facebook"><img src="' . plugins_url( 'images/facebook.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Facebook profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_facebook_url ) . '" title="Facebook" rel="nofollow"><img src="' . plugins_url( 'images/facebook.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Facebook profile', 'ts-fab' ) . '" /></a>';
 				}
 				
 				// Google+
@@ -48,7 +48,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_googleplus_url = 'http://plus.google.com/' . get_user_meta( $author->ID, 'ts_fab_googleplus', true ) . '?rel=author';
 					}
-					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_googleplus_url ) . '" title="Google+"><img src="' . plugins_url( 'images/googleplus.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Google+ profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_googleplus_url ) . '" title="Google+" rel="nofollow"><img src="' . plugins_url( 'images/googleplus.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Google+ profile', 'ts-fab' ) . '" /></a>';
 				}
 				
 				// LinkedIn
@@ -58,7 +58,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_linkedin_url = 'http://www.linkedin.com/in/' . get_user_meta( $author->ID, 'ts_fab_linkedin', true );
 					}
-					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_linkedin_url ) . '" title="LinkedIn"><img src="' . plugins_url( 'images/linkedin.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My LinkedIn profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_linkedin_url ) . '" title="LinkedIn" rel="nofollow"><img src="' . plugins_url( 'images/linkedin.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My LinkedIn profile', 'ts-fab' ) . '" /></a>';
 				}
 
 				// Instagram
@@ -68,7 +68,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_instagram_url = 'http://instagram.com/' . get_user_meta( $author->ID, 'ts_fab_instagram', true );
 					}
-					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_instagram_url ) . '" title="Instagram"><img src="' . plugins_url( 'images/instagram.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Instagram profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_instagram_url ) . '" title="Instagram" rel="nofollow"><img src="' . plugins_url( 'images/instagram.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Instagram profile', 'ts-fab' ) . '" /></a>';
 				}
 
 				// Flickr
@@ -78,7 +78,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_flickr_url = 'http://www.flickr.com/photos/' . get_user_meta( $author->ID, 'ts_fab_flickr', true );
 					}
-					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_flickr_url ) . '" title="Flickr"><img src="' . plugins_url( 'images/flickr.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Flickr profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_flickr_url ) . '" title="Flickr" rel="nofollow"><img src="' . plugins_url( 'images/flickr.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Flickr profile', 'ts-fab' ) . '" /></a>';
 				}
 
 				// Pinterest
@@ -88,7 +88,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_pinterest_url = 'http://pinterest.com/' . get_user_meta( $author->ID, 'ts_fab_pinterest', true );
 					}
-					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_pinterest_url ) . '" title="Pinterest"><img src="' . plugins_url( 'images/pinterest.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Pinterest profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_pinterest_url ) . '" title="Pinterest" rel="nofollow"><img src="' . plugins_url( 'images/pinterest.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Pinterest profile', 'ts-fab' ) . '" /></a>';
 				}
 
 				// Tumblr
@@ -98,7 +98,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_tumblr_url = 'http://' . get_user_meta( $author->ID, 'ts_fab_tumblr', true ) . '.tumblr.com';
 					}
-					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_tumblr_url ) . '" title="Tumblr"><img src="' . plugins_url( 'images/tumblr.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Tumblr blog', 'ts-fab' ) . '" /></a>';
+					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_tumblr_url ) . '" title="Tumblr" rel="nofollow"><img src="' . plugins_url( 'images/tumblr.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Tumblr blog', 'ts-fab' ) . '" /></a>';
 				}
 
 				// YouTube
@@ -108,7 +108,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_youtube_url = 'http://www.youtube.com/user/' . get_user_meta( $author->ID, 'ts_fab_youtube', true );
 					}
-					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_youtube_url ) . '" title="YouTube"><img src="' . plugins_url( 'images/youtube.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My YouTube channel', 'ts-fab' ) . '" /></a>';
+					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_youtube_url ) . '" title="YouTube" rel="nofollow"><img src="' . plugins_url( 'images/youtube.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My YouTube channel', 'ts-fab' ) . '" /></a>';
 				}
 
 				// Vimeo
@@ -118,7 +118,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_vimeo_url = 'http://vimeo.com/' . get_user_meta( $author->ID, 'ts_fab_vimeo', true );
 					}
-					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_vimeo_url ) . '" title="Vimeo"><img src="' . plugins_url( 'images/vimeo.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Vimeo channel', 'ts-fab' ) . '" /></a>';
+					$ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_vimeo_url ) . '" title="Vimeo" rel="nofollow"><img src="' . plugins_url( 'images/vimeo.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Vimeo channel', 'ts-fab' ) . '" /></a>';
 				}
 			
 			$ts_fab_bio .= '</div>
@@ -128,7 +128,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 			<div class="ts-fab-header">';
 			
 			if( $author->user_url ) {
-				$ts_fab_bio .= '<h4><a href="' . $author->user_url . '">' . $author->display_name . '</a></h4>';
+				$ts_fab_bio .= '<h4><a href="' . $author->user_url . '" rel="nofollow">' . $author->display_name . '</a></h4>';
 			} else {
 				$ts_fab_bio .= '<h4>' . $author->display_name . '</h4>';
 			}
@@ -138,7 +138,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 				
 				if( get_user_meta( $author->ID, 'ts_fab_company', true) ) {
 					if( get_user_meta( $author->ID, 'ts_fab_company_url', true) ) {
-						$ts_fab_bio .= ' ' . __( 'at', 'ts-fab' ) . ' <a href="' . esc_url( get_user_meta( $author->ID, 'ts_fab_company_url', true) ) . '">';
+						$ts_fab_bio .= ' ' . __( 'at', 'ts-fab' ) . ' <a href="' . esc_url( get_user_meta( $author->ID, 'ts_fab_company_url', true) ) . '" rel="nofollow">';
 							$ts_fab_bio .= '<span>' . get_user_meta( $author->ID, 'ts_fab_company', true) . '</span>';
 						$ts_fab_bio .= '</a>';
 					} else {
@@ -196,7 +196,7 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_twitter_url = 'http://twitter.com/' . get_user_meta( $author->ID, 'ts_fab_twitter', true );
 					}
-					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_twitter_url ) . '" title="Twitter"><img src="' . plugins_url( 'images/twitter.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Twitter profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_twitter_url ) . '" title="Twitter" rel="nofollow"><img src="' . plugins_url( 'images/twitter.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Twitter profile', 'ts-fab' ) . '" /></a>';
 				}
 				
 				// Facebook
@@ -206,7 +206,7 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_facebook_url = 'http://facebook.com/' . get_user_meta( $author->ID, 'ts_fab_facebook', true );
 					}
-					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_facebook_url ) . '" title="Facebook"><img src="' . plugins_url( 'images/facebook.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Facebook profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_facebook_url ) . '" title="Facebook" rel="nofollow"><img src="' . plugins_url( 'images/facebook.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Facebook profile', 'ts-fab' ) . '" /></a>';
 				}
 				
 				// Google+
@@ -216,7 +216,7 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_googleplus_url = 'http://plus.google.com/' . get_user_meta( $author->ID, 'ts_fab_googleplus', true ) . '?rel=author';
 					}
-					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_googleplus_url ) . '" title="Google+"><img src="' . plugins_url( 'images/googleplus.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Google+ profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_googleplus_url ) . '" title="Google+" rel="nofollow"><img src="' . plugins_url( 'images/googleplus.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Google+ profile', 'ts-fab' ) . '" /></a>';
 				}
 				
 				// LinkedIn
@@ -226,7 +226,7 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_linkedin_url = 'http://www.linkedin.com/in/' . get_user_meta( $author->ID, 'ts_fab_linkedin', true );
 					}
-					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_linkedin_url ) . '" title="LinkedIn"><img src="' . plugins_url( 'images/linkedin.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My LinkedIn profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_linkedin_url ) . '" title="LinkedIn" rel="nofollow"><img src="' . plugins_url( 'images/linkedin.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My LinkedIn profile', 'ts-fab' ) . '" /></a>';
 				}
 
 				// Instagram
@@ -236,7 +236,7 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_instagram_url = 'http://instagram.com/' . get_user_meta( $author->ID, 'ts_fab_instagram', true );
 					}
-					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_instagram_url ) . '" title="Instagram"><img src="' . plugins_url( 'images/instagram.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Instagram profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_instagram_url ) . '" title="Instagram" rel="nofollow"><img src="' . plugins_url( 'images/instagram.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Instagram profile', 'ts-fab' ) . '" /></a>';
 				}
 
 				// Flickr
@@ -246,7 +246,7 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_flickr_url = 'http://www.flickr.com/photos/' . get_user_meta( $author->ID, 'ts_fab_flickr', true );
 					}
-					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_flickr_url ) . '" title="Flickr"><img src="' . plugins_url( 'images/flickr.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Flickr profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_flickr_url ) . '" title="Flickr" rel="nofollow"><img src="' . plugins_url( 'images/flickr.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Flickr profile', 'ts-fab' ) . '" /></a>';
 				}
 
 				// Pinterest
@@ -256,7 +256,7 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_pinterest_url = 'http://pinterest.com/' . get_user_meta( $author->ID, 'ts_fab_pinterest', true );
 					}
-					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_pinterest_url ) . '" title="Pinterest"><img src="' . plugins_url( 'images/pinterest.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Pinterest profile', 'ts-fab' ) . '" /></a>';
+					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_pinterest_url ) . '" title="Pinterest" rel="nofollow"><img src="' . plugins_url( 'images/pinterest.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Pinterest profile', 'ts-fab' ) . '" /></a>';
 				}
 
 				// Tumblr
@@ -266,7 +266,7 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_tumblr_url = 'http://' . get_user_meta( $author->ID, 'ts_fab_tumblr', true ) . '.tumblr.com';
 					}
-					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_tumblr_url ) . '" title="Tumblr"><img src="' . plugins_url( 'images/tumblr.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Tumblr blog', 'ts-fab' ) . '" /></a>';
+					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_tumblr_url ) . '" title="Tumblr" rel="nofollow"><img src="' . plugins_url( 'images/tumblr.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Tumblr blog', 'ts-fab' ) . '" /></a>';
 				}
 
 				// YouTube
@@ -276,7 +276,7 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_youtube_url = 'http://www.youtube.com/user/' . get_user_meta( $author->ID, 'ts_fab_youtube', true );
 					}
-					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_youtube_url ) . '" title="YouTube"><img src="' . plugins_url( 'images/youtube.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My YouTube channel', 'ts-fab' ) . '" /></a>';
+					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_youtube_url ) . '" title="YouTube" rel="nofollow"><img src="' . plugins_url( 'images/youtube.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My YouTube channel', 'ts-fab' ) . '" /></a>';
 				}
 
 				// Vimeo
@@ -286,14 +286,14 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 					} else {
 						$ts_fab_vimeo_url = 'http://vimeo.com/' . get_user_meta( $author->ID, 'ts_fab_vimeo', true );
 					}
-					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_vimeo_url ) . '" title="Vimeo"><img src="' . plugins_url( 'images/vimeo.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Vimeo channel', 'ts-fab' ) . '" /></a>';
+					$ts_fab_latest .= '<a href="' . esc_attr( $ts_fab_vimeo_url ) . '" title="Vimeo" rel="nofollow"><img src="' . plugins_url( 'images/vimeo.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . __( 'My Vimeo channel', 'ts-fab' ) . '" /></a>';
 				}
 			
 			$ts_fab_latest .= '</div>
 		</div>
 		<div class="ts-fab-text">
 			<div class="ts-fab-header">
-				<h4>' . __( 'Latest posts by ', 'ts-fab' ) . $author->display_name . ' <span class="latest-see-all">(<a href="' . get_author_posts_url( $author->ID ) . '">' . __( 'see all', 'ts-fab' ) . '</a>)</span></h4>
+				<h4>' . __( 'Latest posts by ', 'ts-fab' ) . $author->display_name . ' <span class="latest-see-all">(<a href="' . get_author_posts_url( $author->ID ) . '" rel="nofollow">' . __( 'see all', 'ts-fab' ) . '</a>)</span></h4>
 			</div>
 			<ul class="ts-fab-latest">';
 		
