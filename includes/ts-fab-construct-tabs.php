@@ -127,8 +127,10 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 		<div class="ts-fab-text">
 			<div class="ts-fab-header">';
 			
+			$ts_fab_follow_author_link = apply_filters( 'ts_fab_follow_author_link', 'rel="nofollow"' );
+
 			if( $author->user_url ) {
-				$ts_fab_bio .= '<h4><a href="' . $author->user_url . '" rel="nofollow">' . $author->display_name . '</a></h4>';
+				$ts_fab_bio .= '<h4><a href="' . $author->user_url . '" ' . $ts_fab_follow_author_link . '>' . $author->display_name . '</a></h4>';
 			} else {
 				$ts_fab_bio .= '<h4>' . $author->display_name . '</h4>';
 			}

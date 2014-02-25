@@ -3,7 +3,7 @@ Contributors: slobodanmanic, nikolicdragan
 Tags: author, author description, author box, author bio, fancier author box, thematosoup author box, author profile, author bio box, multi author, facebook, twitter, google plus, linkedin, vimeo, youtube, instagram, pinterest, tumblr
 Requires at least: 3.1
 Tested up to: 3.8.1
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -121,7 +121,11 @@ No, this is not possible in the free version.
 == Changelog ==
 
 
-= 1.2.1 =
+= 1.2.3 =
+
+* Adds ts_fab_follow_author_link filter that allows nofollow to be removed from authors’ website link.
+
+= 1.2.2 =
 
 * Adds nofollow to authors' website and social links.
 
