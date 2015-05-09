@@ -22,7 +22,7 @@
 .ts-fab-list {
 	overflow: hidden;
 	margin: 0 !important;
-	padding: 0 0 0 5px;
+	padding: 0 !important;
 }
 .ts-fab-list li {
 	display: block;
@@ -48,10 +48,6 @@
 	font-size: 13px;
 	color: #333;
 	font-weight: bold;
-	
-	border-radius: 5px 5px 0 0;
-	-webkit-border-radius: 5px 5px 0 0;
-	-moz-border-radius: 5px 5px 0 0;
 	
 	box-sizing: content-box;
 	-moz-box-sizing: content-box;
@@ -210,7 +206,7 @@
 
 /* Social links */
 .ts-fab-social-links {
-	margin: 0.1em 0 0;
+	margin: 5px 0 0;
 	text-align: center;
 }
 .ts-fab-social-links a {

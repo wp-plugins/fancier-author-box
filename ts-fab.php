@@ -1,76 +1,68 @@
 <?php
-
-/*
-Plugin Name: Fancier Author Box
-Plugin URI: http://wordpress.org/extend/plugins/fancier-author-box/
-Description: Adds feature rich author box to your posts, pages and custom post types. If you decide to switch to <a href="http://fanciestauthorbox.com">Fanciest Author Box</a>, please deactivate Fancier Author Box first.
-Version: 1.3.2
-Author: ThematoSoup
-Author URI: http://thematosoup.com
-License: GPL2
-*/
-
-
-
-/*
- * Include files
- * Add action links in Plugins page
- * Add meta links in Plugins page
- * Helper functions for default settings
- * Add Fancier Author Box to posts
- * Enqueue Fancier Author Box scripts and styles
+/**
+ * Main plugin file
+ *
+ * @link              https://wordpress.org/plugins/fancier-author-box/
+ * @since             1.0.0
+ * @package           Fancier_Author_Box
+ *
+ * @wordpress-plugin
+ * Plugin Name:       Fancier Author Box
+ * Plugin URI:        https://wordpress.org/plugins/fancier-author-box/
+ * Description:       Adds feature rich author box to your posts, pages and custom post types. If you decide to switch to <a href="http://fanciestauthorbox.com">Fanciest Author Box</a>, please deactivate Fancier Author Box first.
+ * Version:           1.4
+ * Author:            ThematoSoup
+ * Author URI:        http://thematosoup.com/
+ * License:           GPL-2.0+
+ * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * Text Domain:       ts-fab
+ * Domain Path:       /languages
  */
 
 
+// Plugin and user settings
 if ( is_admin() ) {
-
-	// Register plugin settings page
-	require_once( dirname(__FILE__) . '/includes/ts-fab-settings.php' );
-
-	// Add user settings
-	require_once( dirname(__FILE__) . '/includes/ts-fab-user-settings.php' );
-
+	require_once( dirname(__FILE__) . '/includes/ts-fab-settings.php' ); // Plugin settings
+	require_once( dirname(__FILE__) . '/includes/ts-fab-user-settings.php' ); // User settings
 }
 
-// Include tab constructor
+// Tab constructor
 require_once( dirname(__FILE__) . '/includes/ts-fab-construct-tabs.php' );
 
 // Load text domain
 load_plugin_textdomain( 'ts-fab', false, 'fancier-author-box/languages' );
 
 
-
 /**
- * Add action links in Plugins page
+ * Adds plugin action links.
  *
  * @since 1.0
+ *
+ * @param  array $links Plugin links.
+ * @return array $links Updated plugin links.
  */
-add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'ts_fab_plugin_action_links' );
 function ts_fab_plugin_action_links( $links ) {
-
 	return array_merge(
 		array(
 			'settings' => '<a href="' . get_bloginfo( 'wpurl' ) . '/wp-admin/options-general.php?page=fancier_author_box">' . __( 'Settings', 'ts-fab' ) . '</a>'
 		),
 		$links
 	);
-
 }
-
+add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'ts_fab_plugin_action_links' );
 
 
 /**
- * Add meta links in Plugins page
+ * Adds plugin meta links
  *
  * @since 1.0
- * @todo Figure out which links to use
+ *
+ * @param  array $links Plugin links.
+ * @return array $links Updated plugin links.
  */
-add_filter( 'plugin_row_meta', 'ts_fab_plugin_meta_links', 10, 2 );
 function ts_fab_plugin_meta_links( $links, $file ) {
-
 	$plugin = plugin_basename(__FILE__);
 
-	// create link
 	if ( $file == $plugin ) {
 		return array_merge(
 			$links,
@@ -78,20 +70,18 @@ function ts_fab_plugin_meta_links( $links, $file ) {
 		);
 	}
 	return $links;
-
 }
-
+add_filter( 'plugin_row_meta', 'ts_fab_plugin_meta_links', 10, 2 );
 
 
 /**
- * Helper functions to get default option for Display Settings
+ * Gets default option for Display Settings.
  *
- * Default options are not stored in a database, these arrays are used instead, unless the option has been set
- *
- * @since 1.0
+ * @since  1.0
+ * 
+ * @return array $display_settings Default settings array.
  */
 function ts_fab_get_display_settings() {
-
 	$default_display_settings = array(
 		'show_in_posts'				=> 'below',
 		'show_in_pages'				=> 'below',
@@ -126,24 +116,22 @@ function ts_fab_get_display_settings() {
 
 	$default_display_settings = array_merge( $default_display_settings, $custom_post_types_display_settings );
 
-
 	$display_settings = wp_parse_args( get_option( 'ts_fab_display_settings' ), $default_display_settings );
 
 	return $display_settings;
-
 }
 
 
-
 /**
- * Add Fancier Author Box to post/page content
+ * Adds Fancier Aurhot Box to content.
  *
- * @since 1.0
+ * @since  1.0
+ * 
+ * @param  string $content Post content.
+ * @return string $content Post content.
  */
-add_filter( 'the_content', 'ts_fab_add_author_box', 15 );
 function ts_fab_add_author_box( $content ) {
-
-	if ( is_main_query() ) {
+	if ( is_main_query() ) { // Only do it if main query
 		global $authordata;
 		global $post;
 
@@ -208,39 +196,35 @@ function ts_fab_add_author_box( $content ) {
 	}
 
 	return $content;
-
 }
-
+add_filter( 'the_content', 'ts_fab_add_author_box', 15 );
 
 
 /**
- * Enqueue Fancier Author Box scripts and styles
+ * Enqueue Fancier Author Box scripts and styles.
  *
  * @since 1.0
  */
-add_action( 'wp_enqueue_scripts', 'ts_fab_add_scripts_styles' );
 function ts_fab_add_scripts_styles() {
+	$min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
 
-	$css_url = plugins_url( 'css/ts-fab.css', __FILE__ );
-	wp_register_style( 'ts_fab_css', $css_url, '', '1.0' );
+	$css_url = plugins_url( "css/ts-fab$min.css", __FILE__ );
+	wp_register_style( 'ts_fab_css', $css_url, '', '1.4' );
 	wp_enqueue_style( 'ts_fab_css' );
 
-	$js_url = plugins_url( 'js/ts-fab.js', __FILE__ );
-	wp_register_script( 'ts_fab_js', $js_url, array( 'jquery' ), '1.0' );
+	$js_url = plugins_url( "js/ts-fab$min.js", __FILE__ );
+	wp_register_script( 'ts_fab_js', $js_url, array( 'jquery' ), '1.4' );
 	wp_enqueue_script( 'ts_fab_js' );
-
 }
-
+add_action( 'wp_enqueue_scripts', 'ts_fab_add_scripts_styles' );
 
 
 /**
- * Print CSS for color options
+ * Output CSS for color options.
  *
  * @since 1.0
  */
-add_action( 'wp_head', 'ts_fab_print_color_settings' );
 function ts_fab_print_color_settings() {
-
 	$default_colors = array(
 		'#e9e9e9',		// Inactive tab background
 		'#e9e9e9',		// Inactive tab border
@@ -282,6 +266,7 @@ function ts_fab_print_color_settings() {
 	<?php
 	}
 }
+add_action( 'wp_head', 'ts_fab_print_color_settings' );
 
 
 /**

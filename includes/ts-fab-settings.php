@@ -1,22 +1,21 @@
 <?php
-
-/*
- * Add settings page, under Tools menu
- * Contextual help callback function
- * Register settings
- * Settings sections and fields callback functions
- * Settings page callback function
+/**
+ * Handles Fancier Author Box plugin settings
+ *
+ * @link  https://wordpress.org/plugins/fancier-author-box/
+ * @since 1.0
+ *
+ * @package    Fancier_Author_Box
+ * @subpackage Fancier_Author_Box/includes
  */
 
 
-
 /**
- * Add settings page, under Tools menu
+ * Add Fancier Author Box settings page under Settings menu.
  *
  * @since 1.0
  */
 function ts_fab_add_settings_page() {
-
 	global $ts_fab_settings_page;
 
 	$ts_fab_settings_page = add_options_page(
@@ -27,39 +26,35 @@ function ts_fab_add_settings_page() {
 		'ts_fab_show_settings_page'
 	);
 	add_action( 'admin_print_styles-' . $ts_fab_settings_page, 'ts_fab_admin_scripts' );
-
 }
 add_action( 'admin_menu', 'ts_fab_add_settings_page' );
 
 
-
 /**
- * Enqueue admin scripts for color picker
+ * Enqueues admin scripts for color picker.
  *
  * @since 1.0
  */
 function ts_fab_admin_scripts() {
-
 	wp_enqueue_style( 'farbtastic' );
 	wp_enqueue_script( 'farbtastic' );
 
 	$js_url = plugins_url( 'js/ts-fab-admin.min.js', dirname(__FILE__) );
 	wp_enqueue_script( 'ts_fab_admin_js', $js_url, array( 'farbtastic', 'jquery' ) );
-
 }
 
 
 
 /**
- * Register settings
+ * Registers plugin settings.
  *
- * Plugin stores two options arrays, one for each tab in settings page, each one has its own settings section as well
+ * Plugin stores two options arrays, one for each tab in settings page,
+ * each one has its own settings section.
  *
  * @since 1.0
  */
 add_action( 'admin_init', 'ts_fab_initialize_plugin_options' );
 function ts_fab_initialize_plugin_options() {
-
 	// If the theme options don't exist, create them.
 	if( false == get_option( 'ts_fab_display_settings' ) ) {
 		add_option( 'ts_fab_display_settings' );
@@ -195,21 +190,18 @@ function ts_fab_initialize_plugin_options() {
 		'ts_fab_display_settings',
 		'ts_fab_display_settings'
 	);
-
 }
 
 
 
 
 /**
- * Display Settings add_settings_section function callback
+ * Display Settings add_settings_section function callback.
  *
  * @since 1.0
  */
 function ts_fab_display_settings_callback() {
-
 	'<p>' . _e( 'Select where and how Fancier Author Box appears in your posts, pages and custom posts.', 'ts-fab' ) . '</p>';
-
 }
 
 
@@ -220,9 +212,7 @@ function ts_fab_display_settings_callback() {
  * @since 1.0
  */
 function ts_fab_color_settings_callback() {
-
 	// Returns nothing
-
 }
 
 
@@ -233,7 +223,6 @@ function ts_fab_color_settings_callback() {
  * @since 1.0
  */
 function ts_fab_show_in_posts_callback( $args ) {
-
 	$options = ts_fab_get_display_settings(); ?>
 
 	<select id="show_in_posts" name="ts_fab_display_settings[show_in_posts]">
@@ -242,7 +231,6 @@ function ts_fab_show_in_posts_callback( $args ) {
 		<option value="both" <?php selected( $options['show_in_posts'], 'both', true); ?>><?php _e( 'Both', 'ts-fab' ); ?></option>
 		<option value="no" <?php selected( $options['show_in_posts'], 'no', true); ?>><?php _e( 'No', 'ts-fab' ); ?></option>
 	</select><br />
-
 <?php }
 
 
@@ -253,7 +241,6 @@ function ts_fab_show_in_posts_callback( $args ) {
  * @since 1.0
  */
 function ts_fab_show_in_pages_callback( $args ) {
-
 	$options = ts_fab_get_display_settings(); ?>
 
 	<select id="show_in_pages" name="ts_fab_display_settings[show_in_pages]">
@@ -262,7 +249,6 @@ function ts_fab_show_in_pages_callback( $args ) {
 		<option value="both" <?php selected( $options['show_in_pages'], 'both', true); ?>><?php _e( 'Both', 'ts-fab' ); ?></option>
 		<option value="no" <?php selected( $options['show_in_pages'], 'no', true); ?>><?php _e( 'No', 'ts-fab' ); ?></option>
 	</select><br />
-
 <?php }
 
 
@@ -273,7 +259,6 @@ function ts_fab_show_in_pages_callback( $args ) {
  * @since 1.0
  */
 function ts_fab_show_in_custom_post_type_callback( $args ) {
-
 	$options = ts_fab_get_display_settings();
 	$custom_post_type = 'show_in_' . $args[1]; ?>
 
@@ -283,7 +268,6 @@ function ts_fab_show_in_custom_post_type_callback( $args ) {
 		<option value="both" <?php selected( $options["$custom_post_type"], 'both', true); ?>><?php _e( 'Both', 'ts-fab' ); ?></option>
 		<option value="no" <?php selected( $options["$custom_post_type"], 'no', true); ?>><?php _e( 'No', 'ts-fab' ); ?></option>
 	</select><br />
-
 <?php }
 
 
@@ -294,15 +278,13 @@ function ts_fab_show_in_custom_post_type_callback( $args ) {
  * @since 1.0
  */
 function ts_fab_color_picker_callback( $args ) {
-
 	$options = ts_fab_get_display_settings();
 	$background = $args[0] . '_background';
 	$border = $args[0] . '_border_color';
 	$color = $args[0] . '_color';
 
 	foreach( $args[1] as $key => $value ) {
-		$field = $args[0] . $key;
-		?>
+		$field = $args[0] . $key; ?>
 
 		<span>
 			<input type="text" id="<?php echo $field; ?>" name="ts_fab_display_settings[<?php echo $field; ?>]" class="ts-fab-color-input"  value="<?php echo $options[$field]; ?>" />
@@ -310,10 +292,7 @@ function ts_fab_color_picker_callback( $args ) {
 			<div style="z-index: 100; background:#eee; border:1px solid #ccc; position:absolute; display:none;"></div>
 			<span class="description"><?php echo $value; ?></span>
 		</span><br />
-
-		<?php
-	}
-
+	<?php }
 }
 
 
@@ -324,7 +303,6 @@ function ts_fab_color_picker_callback( $args ) {
  * @since 1.0
  */
 function ts_fab_latest_posts_count_callback( $args ) {
-
 	$options = ts_fab_get_display_settings(); ?>
 
 	<label for="latest_posts_count"><span><?php echo $args[1]; ?></span>
@@ -336,7 +314,6 @@ function ts_fab_latest_posts_count_callback( $args ) {
 		<option value="5" <?php selected( $options['latest_posts_count'], 5, true); ?>>5</option>
 	</select>
 	</label>
-
 <?php }
 
 
@@ -347,7 +324,6 @@ function ts_fab_latest_posts_count_callback( $args ) {
  * @since 1.0
  */
 function ts_fab_show_settings_page() { ?>
-
 	<div class="wrap">
 		<div id="icon-users" class="icon32"></div>
 		<h2>Fancier Author Box</h2>
@@ -418,5 +394,4 @@ function ts_fab_show_settings_page() { ?>
 			</div><!-- #postbox-container-1 -->
 		</div>
 	</div>
-
 <?php }

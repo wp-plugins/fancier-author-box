@@ -1,13 +1,26 @@
 <?php
+/**
+ * Prepares Fancier Author Box tabs for display
+ *
+ * @link  https://wordpress.org/plugins/fancier-author-box/
+ * @since 1.0
+ *
+ * @package    Fancier_Author_Box
+ * @subpackage Fancier_Author_Box/includes
+ */
+
 
 /**
- * Construct bio tab
+ * Constructs bio tab.
  *
  * @since 1.0
+ *
+ * @param  string  $context  Above or below posts.
+ * @param  integer $authorid User ID.
+ * @return string  Bio tab HTML.
  */
 function ts_fab_show_bio( $context = '', $authorid = '' ) {
-
-	if( $authorid == '' ) {
+	if ( $authorid == '' ) {
 		global $authordata;
 		$author = $authordata;
 	} else {
@@ -157,22 +170,23 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
 	</div>';
 
 	return $ts_fab_bio;
-
 }
 
 
-
 /**
- * Construct latest posts tab
+ * Constructs latest posts tab.
  *
  * @since 1.0
+ *
+ * @param  string  $context  Above or below posts.
+ * @param  integer $authorid User ID.
+ * @return string  Bio tab HTML.
  */
 function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
-
 	// Grab settings
 	$ts_fab_settings = ts_fab_get_display_settings();
 
-	if( $authorid == '' ) {
+	if ( $authorid == '' ) {
 		global $authordata;
 		$author = $authordata;
 	} else {
@@ -318,16 +332,20 @@ function ts_fab_show_latest_posts( $context = '', $authorid = '' ) {
 	</div>';
 
 	return $ts_fab_latest;
-
 }
 
 
-
 /**
- * Construct Fancier Author Box
- * Used as helper function, to generate Fancier Author Box before or after posts
+ * Constructs Fancier Author Box tab.
  *
+ * Used as helper function, to generate Fancier Author Box before or after posts.
+ * 
  * @since 1.0
+ *
+ * @param  string  $context   Above or below posts.
+ * @param  integer $authorid  User ID.
+ * @param  array   $show_tabs Array of required tabs.
+ * @return string  Bio tab HTML.
  */
 function ts_fab_construct_fab( 
 	$context = '',
@@ -368,5 +386,4 @@ function ts_fab_construct_fab(
 	</div>';
 
 	return $ts_fab;
-
 }
