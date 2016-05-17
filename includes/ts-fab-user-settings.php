@@ -108,7 +108,20 @@ function ts_fab_extra_user_details( $user ) {
 				<span class="description"><?php _e( 'Your Vimeo username or profile URL', 'ts-fab' ); ?></span>
 			</td>
 		</tr><!-- End Vimeo -->
-
+                <tr>
+                        <th><label for="ts_fab_stack_overflow">Stack Overflow</label></th>
+                        <td>
+                                <input type="text" name="ts_fab_stack_overflow" id="ts_fab_stack_overflow" value="<?php echo esc_attr( get_the_author_meta( 'ts_fab_stack_overflow', $user->ID ) ); ?>" class="regular-text" /><br />
+                                <span class="description"><?php _e( 'Your Stack Overflow username or profile URL', 'ts-fab' ); ?></span>
+                        </td>
+                </tr><!-- End Stack Overflow -->
+                <tr>
+                        <th><label for="ts_fab_liferay">Liferay</label></th>
+                        <td>
+                                <input type="text" name="ts_fab_liferay" id="ts_fab_liferay" value="<?php echo esc_attr( get_the_author_meta( 'ts_fab_liferay', $user->ID ) ); ?>" class="regular-text" /><br />
+                                <span class="description"><?php _e( 'Your Liferay Forum profile URL', 'ts-fab' ); ?></span>
+                        </td>
+                </tr><!-- End Liferay -->
 		<tr>
 			<th><label for="ts_fab_position"><?php _e( 'Position', 'ts-fab' ); ?></label></th>
 			<td>
@@ -167,6 +180,8 @@ function ts_fab_save_extra_profile_fields( $user_id ) {
 	update_user_meta( $user_id, 'ts_fab_tumblr', strip_tags( $_POST['ts_fab_tumblr'] ) );
 	update_user_meta( $user_id, 'ts_fab_youtube', strip_tags( $_POST['ts_fab_youtube'] ) );
 	update_user_meta( $user_id, 'ts_fab_vimeo', strip_tags( $_POST['ts_fab_vimeo'] ) );
+	update_user_meta( $user_id, 'ts_fab_stack_overflow', strip_tags( $_POST['ts_fab_stack_overflow'] ) );
+	update_user_meta( $user_id, 'ts_fab_liferay', strip_tags( $_POST['ts_fab_liferay'] ) );
 	update_user_meta( $user_id, 'ts_fab_position', strip_tags( $_POST['ts_fab_position'] ) );
 	update_user_meta( $user_id, 'ts_fab_company', strip_tags( $_POST['ts_fab_company'] ) );
 	update_user_meta( $user_id, 'ts_fab_company_url', esc_url_raw( $_POST['ts_fab_company_url'] ) );
