@@ -142,16 +142,7 @@ function ts_fab_show_bio( $context = '', $authorid = '' ) {
                                         }
                                         $ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_stack_overflow_url ) . '" title="Stack Overflow" rel="nofollow"><img src="' . plugins_url( 'images/stack_overflow.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . $
                                 }
-				 // Liferay
-                                if ( get_user_meta( $author->ID, 'ts_fab_liferay', true ) ) {
-                                        if ( ts_fab_is_url( get_user_meta( $author->ID, 'ts_fab_liferay', true ) ) ) {
-                                                $ts_fab_liferay_url = get_user_meta( $author->ID, 'ts_fab_liferay', true );
-                                        } else {
-                                                $ts_fab_liferay_url = 'http://liferay.com/' . get_user_meta( $author->ID, 'ts_fab_liferay', true );
-                                        }
-                                        $ts_fab_bio .= '<a href="' . esc_attr( $ts_fab_liferay_url ) . '" title="Liferay" rel="nofollow"><img src="' . plugins_url( 'images/liferay.png', dirname(__FILE__) ) . '" width="24" height="24" alt="' . $
-                                }
-			
+
 			$ts_fab_bio .= '</div>
 		</div>
 		
